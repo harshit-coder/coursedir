@@ -1,0 +1,65 @@
+{% load static %}
+{% autoescape on %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Quiz</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="{% static  'course/img/favicon.ico' %}" rel="shortcut icon" />
+  <link rel="stylesheet" href="{% static 'quiz/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'quiz/css/owl.carousel.css' %}">
+  <link rel="stylesheet" href="{% static  'quiz/css/bootstrap-datepicker.css' %}">
+  <link rel="stylesheet" href="{% static 'quiz/css/animate.min.css' %}">
+  <link rel="stylesheet" href="{% static 'quiz/css/fontawesome-all.css' %}">
+  <link rel="stylesheet" href="{% static 'quiz/css/style.css' %}">
+
+
+
+<body>
+<div class="quiz-top-area text-center">
+  <h1>{{ qu1.name }}</h1>
+  <div class="quiz-countdown text-center ul-li" style="position:fixed">
+    <ul id="timerbox">
+
+    </ul>
+  </div>
+</div>
+<div class="wrapper position-relative">
+  <div class="wizard-content-1 clearfix">
+    <div class="steps d-inline-block position-absolute clearfix">
+      <ul class="tablist multisteps-form__progress" id="list">
+
+      </ul>
+    </div>
+    <div class="step-inner-content clearfix position-relative">
+      <form class="multisteps-form__form" action=" " id="quizform" method="post">
+        {% csrf_token %}
+        <div class="form-area position-relative">
+          <div class="multisteps-form__panel js-active" data-animation="fadeIn">
+            <div  class="wizard-forms clearfix position-relative">
+              <div id="quizbox">
+
+              </div>
+
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="{% static  'quiz/js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static  'quiz/js/quiz1.js' %}"></script>
+<script src="{% static  'quiz/js/bootstrap.min.js' %}"></script>
+<script src="{% static  'quiz/js/popper.min.js' %}"></script>
+<script src="{% static  'quiz/js/owl.carousel.min.js' %}"></script>
+<script src="{% static  'quiz/js/bootstrap-datepicker.min.js' %}"></script>
+<script src="{% static  'quiz/js/form-step.js' %}" defer></script>
+<script src="{% static  'quiz/js/jquery.validate.min.js' %}"></script>
+</body>
+</html>
+
+{% endautoescape %}

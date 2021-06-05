@@ -1,0 +1,119 @@
+{% extends 'Homepage.html' %}
+
+{% load static %}
+{% block content %}
+
+
+<!--<section class="search-section ss-other-page">
+    <div class="container">
+        <div class="search-warp">
+            <div class="section-title text-white">
+                <h2><span>Search your course</span></h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+
+                    <form class="course-search-form">
+                        <input type="text" placeholder="Course">
+                        <input type="text" class="last-m" placeholder="Category">
+                        <button class="site-btn btn-dark">Search Couse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>-->
+
+
+<section id="course" class="course-section spad">
+  <div class="container">
+    <div class="section-title mb-0">
+      <h2>All Courses</h2>
+
+    </div>
+  </div>
+  <div class="course-warp">
+    <ul class="course-filter controls">
+      <li class="control active" data-filter="all">All</li>
+      <li class="control" data-filter=".Beginners">Beginners</li>
+      <li class="control" data-filter=".Intermediate">Intermediate</li>
+      <li class="control" data-filter=".Advance">Advance</li>
+
+    </ul>
+    <div class="row course-items-area">
+
+
+      {% for b in ba %}
+      <div class="mix col-lg-3 col-md-4 col-sm-6 Beginners">
+        <div class="course-item">
+          <div class="course-thumb set-bg" data-setbg={% if b.course_image %} "/media/{{ b.course_image }}"{% else %} "{{ b.course_imageurl }}" {% endif %}>
+          {% if b.course_price %}
+          <div class="price">Price: {{ b.course_price }}</div>
+          {% else %}
+          <div class="price">Price: Free</div>
+          {% endif %}
+        </div>
+        <div class="course-info">
+          <div class="course-text">
+            <h5>{{ b.course_name }}</h5>
+            <p>{{ b.course_company }}</p>
+            <div class="students"><a href="{{ b.course_link }}">View course</a></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    {% endfor %} {% for i in ia %}
+    <div class="mix col-lg-3 col-md-4 col-sm-6 Intermediate">
+      <div class="course-item">
+        <div class="course-thumb set-bg" data-setbg={% if i.course_image %} "/media/{{ i.course_image }}"{% else %} "{{ i.course_imageurl }}" {% endif %}>
+        {% if i.course_price %}
+        <div class="price">Price: {{ i.course_price }}</div>
+        {% else %}
+        <div class="price">Price: Free</div>
+        {% endif %}
+      </div>
+      <div class="course-info">
+        <div class="course-text">
+          <h5>{{ i.course_name }}</h5>
+          <p>{{ i.course_company }}</p>
+          <div class="students"><a href="{{ i.course_link }}">View course</a></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  {% endfor %} {% for a in aa %}
+  <div class="mix col-lg-3 col-md-4 col-sm-6 Advance">
+    <div class="course-item">
+      <div class="course-thumb set-bg" data-setbg={% if a.course_image %} "/media/{{ a.course_image }}"{% else %} "{{ a.course_imageurl }}" {% endif %}>
+      {% if a.course_price %}
+      <div class="price">Price: {{ a.course_price }}</div>
+      {% else %}
+      <div class="price">Price: Free</div>
+      {% endif %}
+    </div>
+    <div class="course-info">
+      <div class="course-text">
+        <h5>{{ a.course_name }}</h5>
+        <p>{{ a.course_company }}</p>
+        <div class="students"><a href="{{ a.course_link }}">View course</a></div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+
+  {% endfor %}
+
+  </div>
+  </div>
+</section>
+<div class="text-center" style="margin-bottom: 20px;">
+  <a href="/" class="site-btn">Back to site</a>
+</div>
+
+
+{% endblock %}

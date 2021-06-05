@@ -1,0 +1,80 @@
+{% extends 'Homepage.html' %}
+
+{% load static %}
+{% block content %}
+<script src="{% static  'quiz/js/result.js' %}"></script>
+
+<div class="page-info-section set-bg" data-setbg="{% static  'course/img/page-bg/1.jpg' %}">
+    <div class="container">
+        <div class="site-breadcrumb">
+            <a href="/">Home</a>
+            <span>Result</span>
+        </div>
+    </div>
+</div>
+
+
+<section class="search-section ss-other-page">
+    <div class="container">
+        <div class="search-warp">
+            <div class="section-title text-white">
+                <h2><span>Your result</span></h2>
+            </div>
+            <div class="row">
+                <div id="result" class="col-lg-10 offset-lg-1">
+
+                    <h1>Out of 10 , {{ score }} are correct</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="course" class="course-section spad">
+    <div class="container">
+        <div class="section-title mb-0">
+            <h2>According to the results some courses for you</h2>
+
+        </div>
+    </div>
+    <div class="course-warp">
+        <ul class="course-filter controls">
+            <li class="control active" data-filter="all"></li>
+
+
+        </ul>
+        <div class="row course-items-area">
+
+
+            {% for b in co %}
+            <div class="mix col-lg-3 col-md-4 col-sm-6 ">
+                <div class="course-item">
+                    <div class="course-thumb set-bg" data-setbg={% if b.course_image %} "/media/{{ b.course_image }}"{% else %} "{{ b.course_imageurl }}" {% endif %}>
+                    {% if b.course_price %}
+                    <div class="price">Price: {{ b.course_price }}</div>
+                    {% else %}
+                    <div class="price">Price: Free</div>
+                    {% endif %}
+                </div>
+                <div class="course-info">
+                    <div class="course-text">
+                        <h5>{{ b.course_name }}</h5>
+                        <p>{{ b.course_company }}</p>
+                        <div class="students"><a href="{{ b.course_link }}">View course</a></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        {% endfor %}
+
+    </div>
+    </div>
+</section>
+<div class="text-center" style="padding-bottom: 50px;">
+    <a href="/" class="site-btn">Back to site</a>
+</div>
+
+{% endblock %}

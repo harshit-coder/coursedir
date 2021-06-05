@@ -1,0 +1,83 @@
+{% extends 'Homepage.html' %}
+
+{% load static %}
+{% block content %}
+
+<div class="page-info-section set-bg" data-setbg="{% static 'course/img/page-bg/4.jpg' %}">
+    <div class="container">
+        <div class="site-breadcrumb">
+            <a href="/">Home</a>
+            <span>Contact</span>
+        </div>
+    </div>
+</div>
+
+
+
+
+<section class="contact-page spad pb-0">
+    <div class="container">
+        <div class="row">
+            {% if messages %}
+            {% for message in messages %}
+            <div class="col-lg-8">
+                <strong>{{ message }}</strong>
+            </div>
+            {% endfor %}
+            {% else %}
+            <div class="col-lg-8">
+                <div class="contact-form-warp">
+                    <div class="section-title text-white text-left">
+                        <h2>Get in Touch</h2>
+                        <p>For any query , any suggestions you can contact us </p>
+                    </div>
+                    <form class="contact-form" action="" method="post">
+                        {% csrf_token %}
+                        <input name="name" type="text" placeholder="Your Name" required>
+                        <input name="email" type="email" placeholder="Your E-mail" required>
+
+                        <textarea name="mess" placeholder="Message"></textarea>
+                        <button class="site-btn" type="submit">Sent Message</button>
+                    </form>
+
+                </div>
+            </div>
+          {% endif %}
+            <div class="col-lg-4">
+                <div class="contact-info-area">
+                    <div class="section-title text-left p-0">
+                        <h2>Contact Info</h2>
+                        <p>You can mail me : mukund@gmail.com </p>
+                    </div>
+                    <div class="phone-number">
+                        <span>Direct Line</span>
+                        <h2>+91 755 7953 324</h2>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-behance"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="banner-section spad">
+    <div class="container">
+
+        <div class="text-center pt-5">
+            <a href="/" class="site-btn">Back to site</a>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

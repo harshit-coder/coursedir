@@ -1,0 +1,519 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>COURSEDIR</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="AdvanceUni Education Template">
+    <meta name="keywords" content="Advanceuni, education, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="{% static  'course/img/favicon.ico' %}" rel="shortcut icon" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="{% static  'course/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static  'course/css/font-awesome.min.css' %}" />
+    <link rel="stylesheet" href="{% static  'course/css/owl.carousel.css' %}" />
+    <link rel="stylesheet" href="{% static  'course/css/style.css' %}" /> {% block scripts %}
+    <script src="{% static  'course/js/homepage.js' %}" defer></script>
+    {% endblock scripts %}
+
+</head>
+
+
+
+<body>
+
+<div id="preloder">
+    <div class="loader"></div>
+</div>
+
+<header style=" z-index:2;" id="top" class="header-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3">
+                <div class="site-logo">
+                    <!--  <img src="" alt="Advancesite Logo">-->
+                    <h2 class ="text-white">COURSEDIR</h2>
+                </div>
+                   <div class="nav-switch">
+        <i class="fa fa-bars"></i>
+    </div>
+            </div>
+            <div class="col-lg-9 col-md-9">
+
+                <nav class="main-menu">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+        <li><a href="/">About us</a></li>
+        <li><a href="/more_courses">Courses</a></li>
+        <li><a href="/contact/">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+{% block content %}
+    <div class="swiper-container mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <section class="hero-section set-bg" data-setbg="https://i.ibb.co/M896rxN/1stphoto.png">
+
+    <div class="container">
+
+        <div class="hero-text text-white">
+        <div class ="row">
+            <div class="col-md-7 text-center">
+                    <h2 class ="text-center">Select And Get</h2>
+            <h3>The best personalized maths online course </h3>
+            <h5>We have a collection of best maths course</h5>
+
+            <div class="text-center" style="margin-top: 20px;">
+    <a href="" class="site-btn">Know More</a>
+</div
+
+
+
+            </div>
+            <div class="col-md-7">
+
+            </div>
+
+
+        </div>
+        </div>
+
+
+
+
+
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+              <!--  <form class="intro-newslatter">
+                {% static  'course/img/bgack.jpg' %}
+        <input type="text" placeholder="Name">
+        <input type="text" class="last-s" placeholder="E-mail">
+        <button class="site-btn">Sign Up Now</button>
+    </form>-->
+            </div>
+        </div>
+    </div>
+</section>
+
+</div>
+        <div class="swiper-slide">
+            <section class="hero-section set-bg" data-setbg="https://i.ibb.co/R78KgWF/image1.png">
+
+    <div class="container">
+
+        <div class="hero-text text-white">
+        <div class ="row">
+            <div class="col-md-7 text-center" >
+                    <h2 class="text-center">Start a quiz</h2>
+                    <h3>To analyze which course is better for you</h3>
+                    <h5>Get the best personalized course for you</h5>
+             <div  class="text-center" style="margin-top: 20px;">
+            {% for q in qu %}
+                    <button class="quiz" style="background-color: #d82a4e; color:white;height: 66px;width: 170px;font-size: x-large;font-family: emoji;" data-pk="{{ q.id }}" data-quest="{{ q.no_of_quest}}" data-time="{{ q.time }}">Start the quiz</button> {% endfor %}
+            </div>
+
+            </div>
+            <div class="col-md-7">
+
+            </div>
+
+
+        </div>
+        </div>
+
+
+
+
+
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+              <!--  <form class="intro-newslatter">
+                {% static  'course/img/bgack.jpg' %}
+        <input type="text" placeholder="Name">
+        <input type="text" class="last-s" placeholder="E-mail">
+        <button class="site-btn">Sign Up Now</button>
+    </form>-->
+            </div>
+        </div>
+    </div>
+</section>
+
+</div>
+    <div class="swiper-slide">
+            <section class="hero-section set-bg" data-setbg="https://i.ibb.co/FXBHFQW/3rd-photo.png">
+
+    <div class="container">
+
+        <div class="hero-text text-white">
+        <div class ="row">
+            <div class="col-md-7 text-center " >
+                <h2>Select the area </h2>
+                  <h3>And get your personalized course</h3>
+                   <h5>From collection of best maths online courses</h5>
+
+
+            <div class="text-center" style="margin-top: 20px;">
+    <a href="/more_courses" class="site-btn">Choose</a>
+</div
+
+            </div>
+            <div class="col-md-7">
+
+            </div>
+
+
+        </div>
+        </div>
+
+
+
+
+
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+              <!--  <form class="intro-newslatter">
+                {% static  'course/img/bgack.jpg' %}
+        <input type="text" placeholder="Name">
+        <input type="text" class="last-s" placeholder="E-mail">
+        <button class="site-btn">Sign Up Now</button>
+    </form>-->
+            </div>
+        </div>
+    </div>
+</section>
+
+</div>
+
+
+
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+
+
+<!--
+<section class="hero-section set-bg" data-setbg="https://image.freepik.com/free-photo/portrait-redhead-student-with-doubtful-indecisive-look-trying-solve-difficult-mathematical-problem-recollecting-something-touching-his-fuzzy-beard-while-standing-blackboard-class_273609-6256.jpg">
+    <div class="container">
+        <div class="hero-text text-white">
+            <div>
+            <h2>Select and get the best online courses from top sites</h2>
+            <h4>We have a list of top courses from good sites like khan academy, coursera,etc.</h4>
+                 <div class=" text-white text-center">
+                        <p>Start a quiz to analyze which course is better for you</p>
+
+                    </div>
+                    {% for q in qu %}
+                    <button class="quiz" style="background-color: red; color:white;height: 46px;width: 170px;font-size: x-large;font-family: emoji;" data-pk="{{ q.id }}" data-quest="{{ q.no_of_quest}}" data-time="{{ q.time }}">Start the quiz</button> {% endfor %}
+</div>
+        </div>
+
+
+
+
+        <div class="row">
+            <div class="col-lg-10 offset-lg-1">
+           <form class="intro-newslatter">
+                {% static  'course/img/bgack.jpg' %}
+        <input type="text" placeholder="Name">
+        <input type="text" class="last-s" placeholder="E-mail">
+        <button class="site-btn">Sign Up Now</button>
+    </form>
+            </div>
+        </div>
+    </div>
+</section>
+-->
+
+<!--<section class="categories-section spad">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our Course Categories</h2>
+            <p>Here are some of the categories from which we have selected some good course content for you.</p>
+        </div>
+        <div class="row">
+            {% for i ,j in li1 %}
+            <div class="col-lg-4 col-md-6">
+                <div class="categorie-item">
+                    <div class="ci-thumb set-bg" data-setbg="{% static 'course/img/categories/5.jpg' %}"></div>
+                    <div class="ci-text">
+                        <h5>{{ i }}</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur</p>
+                        <span>{{ j }} courses </span>
+
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+</section>-->
+
+
+<!--<section class="search-section">
+<div class="container">
+    <div class="search-warp">
+        <div class="section-title text-white">
+            <h2>Search your course</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+
+                <form class="course-search-form">
+                    <input type="text" placeholder="Course">
+                    <input type="text" class="last-m" placeholder="Category">
+                    <button class="site-btn">Search Course</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</section>-->
+<!--<section id="quiz" class="signup-section spad">
+    <div class="signup-bg set-bg" data-setbg="{% static 'course/img/student-class-looking-course.jpg' %}"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="signup-warp">
+                    <div class="section-title text-white text-left">
+                        <h2>Start a quiz to analyze which course is better for you</h2>
+                        <p>Here are some categories. Click on any one and timer will start. </p>
+                    </div>
+                    {% for q in qu %}
+                    <button class="quiz" style="background-color: red; color:white; height:40px;width:90px; ;" data-pk="{{ q.id }}" data-quest="{{ q.no_of_quest}}" data-time="{{ q.time }}">{{ q.name }}</button> {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+-->
+
+<section id="course" class="course-section spad">
+    <div class="container">
+        <div class="section-title mb-0">
+            <h2>Featured Courses</h2>
+            <p>Here are some of the recent added courses</p>
+        </div>
+    </div>
+    <div class="course-warp">
+        <ul class="course-filter controls">
+            <li class="control active" data-filter="all">All</li>
+            <li class="control" data-filter=".Beginners">Beginners</li>
+            <li class="control" data-filter=".Intermediate">Intermediate</li>
+            <li class="control" data-filter=".Advance">Advance</li>
+
+        </ul>
+        <div class="row course-items-area">
+
+
+            {% for b in ba %}
+            <div class="mix col-lg-3 col-md-4 col-sm-6 Beginners">
+                <div class="course-item">
+                    <div class="course-thumb set-bg" data-setbg={% if b.course_image %} "/media/{{ b.course_image }}"{% else %} "{{ b.course_imageurl }}" {% endif %}>
+                    {% if b.course_price %}
+                    <div class="price">Price: {{ b.course_price }}</div>
+                    {% else %}
+                    <div class="price">Price: Free</div>
+                    {% endif %}
+                </div>
+                <div class="course-info">
+                    <div class="course-text">
+                        <h5>{{ b.course_name }}</h5>
+                        <p>{{ b.course_company }}</p>
+                        <div class="students"><a href="{{ b.course_link }}">View course</a></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        {% endfor %} {% for i in ia %}
+        <div class="mix col-lg-3 col-md-4 col-sm-6 Intermediate">
+            <div class="course-item">
+                <div class="course-thumb set-bg" data-setbg={% if i.course_image %} "/media/{{ i.course_image }}"{% else %} "{{ i.course_imageurl }}" {% endif %}>
+                {% if i.course_price %}
+                <div class="price">Price: {{ i.course_price }}</div>
+                {% else %}
+                <div class="price">Price: Free</div>
+                {% endif %}
+            </div>
+            <div class="course-info">
+                <div class="course-text">
+                    <h5>{{ i.course_name }}</h5>
+                    <p>{{ i.course_company }}</p>
+                    <div class="students"><a href="{{ i.course_link }}">View course</a></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    {% endfor %} {% for a in aa %}
+    <div class="mix col-lg-3 col-md-4 col-sm-6 Advance">
+        <div class="course-item">
+            <div class="course-thumb set-bg" data-setbg={% if a.course_image %} "/media/{{ a.course_image }}"{% else %} "{{ a.course_imageurl }}" {% endif %}>
+            {% if a.course_price %}
+            <div class="price">Price: {{ a.course_price }}</div>
+            {% else %}
+            <div class="price">Price: Free</div>
+            {% endif %}
+        </div>
+        <div class="course-info">
+            <div class="course-text">
+                <h5>{{ a.course_name }}</h5>
+                <p>{{ a.course_company }}</p>
+                <div class="students"><a href="{{ a.course_link }}">View course</a></div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    {% endfor %}
+
+    </div>
+    </div>
+</section>
+<div class="text-center" style="margin-bottom: 20px;">
+    <a href="/more_courses" class="site-btn">View more courses</a>
+</div>
+
+
+
+
+<!--<section class="banner-section spad">
+<div class="container">
+    <div class="section-title mb-0 pb-2">
+        <h2>Join Our Community Now!</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+    </div>
+    <div class="text-center pt-5">
+        <a href="#" class="site-btn">Register Now</a>
+    </div>
+</div>
+</section>-->
+
+{% endblock %}
+<footer class="footer-section spad pb-0">
+    <div class="footer-top">
+        <div class="footer-warp">
+            <div class="row">
+                <ul class="footer-menu">
+                    <li><a href="#course">Courses</a></li>
+                    <li><a href="/contact/">Contact Us</a></li>
+                    <li><a href="#top">About Site </a></li>
+                </ul>
+
+                <!-- <div class="widget-item">
+        <h4>Contact Info</h4>
+        <ul class="contact-list">
+            <li>1481 Creekside Lane <br>Avila Beach, CA 931</li>
+            <li>+53 345 7953 32453</li>
+            <li><a href="https://preview.colorlib.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8cf5e3f9fee1ede5e0ccebe1ede5e0a2efe3e1">[email&#160;protected]</a></li>
+        </ul>
+    </div>
+    <div class="widget-item">
+        <h4>Engeneering</h4>
+        <ul>
+            <li><a href="#">Applied Studies</a></li>
+            <li><a href="#">Computer Engeneering</a></li>
+            <li><a href="#">Software Engeneering</a></li>
+            <li><a href="#">Informational Engeneering</a></li>
+            <li><a href="#">System Engeneering</a></li>
+        </ul>
+    </div>
+    <div class="widget-item">
+        <h4>Graphic Intermediate</h4>
+        <ul>
+            <li><a href="#">Applied Studies</a></li>
+            <li><a href="#">Computer Engeneering</a></li>
+            <li><a href="#">Software Engeneering</a></li>
+            <li><a href="#">Informational Engeneering</a></li>
+            <li><a href="#">System Engeneering</a></li>
+        </ul>
+    </div>-->
+                <!--<div class="widget-item">
+                    <h4>Upcoming Sections</h4>
+                    <ul>
+                        <li><a href="#">Calculus</a></li>
+                        <li><a href="#">Calculus</a></li>
+                        <li><a href="#">Calculus</a></li>
+                        <li><a href="#">Calculus</a></li>
+                        <li><a href="#">Calculus</a></li>
+
+                    </ul>
+                </div>-->
+                <!--     <div class="widget-item">
+
+                       <a href="#top" class="site-btn">Go to Top</a>
+
+                <h4>Newsletter</h4><form class="footer-newslatter">
+             <input type="email" placeholder="E-mail">
+             <button class="site-btn">Subscribe</button>
+             <p>*We don’t spam</p>
+         </form>
+                   </div>-->
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+
+<script src="{% static  'course/js/jquery-3.2.1.min.js' %}"></script>
+<script src="{% static  'course/js/bootstrap.min.js' %}"></script>
+<script src="{% static  'course/js/mixitup.min.js' %}"></script>
+<script src="{% static  'course/js/circle-progress.min.js' %}"></script>
+<script src="{% static  'course/js/owl.carousel.min.js' %}"></script>
+<script src="{% static  'course/js/main.js' %}"></script>
+    <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
+
+
+</html>
